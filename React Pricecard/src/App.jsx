@@ -9,9 +9,20 @@ function App() {
 
   return (
     <>
-      <Card />
+      <Card {...obj} />
     </>
   )
 }
 
 export default App
+
+
+
+let obj = {
+  C1: "FREE",
+  C2: "PLUS",
+  C3: "PRO",
+  V1: "0",
+  V2: "10",
+  V3: "50",
+}

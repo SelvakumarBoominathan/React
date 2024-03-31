@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Card() {
+function Card(props) {
   return (
 
     <div class="parent-container">
       <div id='Details-container1'>
-        <h6>Free</h6>
-        <h1>$0/month</h1>
+        <h6>{props.C1}</h6>
+        <h2>${props.V1}/month</h2>
         <hr />
         <ul>
           <li>✅ Single User</li>
@@ -22,8 +22,8 @@ function Card() {
       </div>
 
       <div id='Details-container2'>
-        <h6>PLUS</h6>
-        <h1>$9/month</h1>
+        <h6>{props.C2}</h6>
+        <h2>${props.V2}/month</h2>
         <hr />
         <ul>
           <li>✅ 5 Users</li>
@@ -39,8 +39,8 @@ function Card() {
       </div>
 
       <div id='Details-container3'>
-        <h6>PRO</h6>
-        <h1>$49/month</h1>
+        <h6>{props.C3}</h6>
+        <h2>${props.V3}/month</h2>
         <hr />
         <ul>
           <li>✅ Unlimited Users</li>
