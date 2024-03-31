@@ -3,8 +3,8 @@ import React from 'react';
 function Card(props) {
   return (
 
-    <div class="parent-container">
-      <div id='Details-container1'>
+    <div class='parent-container'>
+      <div id='Details-container1' class='card-details'>
         <h6>{props.C1}</h6>
         <h2>${props.V1}/month</h2>
         <hr />
@@ -21,7 +21,7 @@ function Card(props) {
         <button>BUTTON</button>
       </div>
 
-      <div id='Details-container2'>
+      <div id='Details-container2' class='card-details'>
         <h6>{props.C2}</h6>
         <h2>${props.V2}/month</h2>
         <hr />
@@ -38,7 +38,7 @@ function Card(props) {
         <button>BUTTON</button>
       </div>
 
-      <div id='Details-container3'>
+      <div id='Details-container3' class='card-details'>
         <h6>{props.C3}</h6>
         <h2>${props.V3}/month</h2>
         <hr />
