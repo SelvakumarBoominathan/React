@@ -1,29 +1,68 @@
-import { useState } from 'react'
-import reactDOM from 'react-dom'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Card from './pricecard'
+import React from 'react';
+import './App.css';
+import PriceCard from './pricecard';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const plans = [
+    {
+      name: "FREE",
+      price: "0",
+      features: [
+        "✅ Single User",
+        "✅ 50GB Storage",
+        "✅ Unlimited Public Projects",
+        "✅ Community Access",
+        "❌ Unlimited Private Projects",
+        "❌ Dedicated Phone Support",
+        "❌ Free Subdomain",
+        "❌ Monthly Status Reports"
+      ]
+    },
+    {
+      name: "PLUS",
+      price: "10",
+      features: [
+        "✅ 5 Users",
+        "✅ 50GB Storage",
+        "✅ Unlimited Public Projects",
+        "✅ Community Access",
+        "✅ Unlimited Private Projects",
+        "✅ Dedicated Phone Support",
+        "✅ Free Subdomain",
+        "❌ Monthly Status Reports"
+      ]
+    },
+    {
+      name: "PRO",
+      price: "50",
+      features: [
+        "✅ Unlimited Users",
+        "✅ 50GB Storage",
+        "✅ Unlimited Public Projects",
+        "✅ Community Access",
+        "✅ Unlimited Private Projects",
+        "✅ Dedicated Phone Support",
+        "✅ Free Subdomain",
+        "✅ Monthly Status Reports"
+      ]
+    }
+  ];
 
   return (
-    <>
-      <Card {...obj} />
-    </>
-  )
+    <div className='parent-container'>
+      {plans.map((plan, index) => (
+        <PriceCard
+          key={index}
+          plan={plan}
+          className={
+            plan.name === "FREE" ? 'card-details-1' :
+            plan.name === "PLUS" ? 'card-details-2' :
+            plan.name === "PRO" ? 'card-details-3' : ''
+          }
+        />
+      ))}
+    </div>
+  );
 }
 
-export default App
-
-
-
-let obj = {
-  C1: "FREE",
-  C2: "PLUS",
-  C3: "PRO",
-  V1: "0",
-  V2: "10",
-  V3: "50",
-}
+export default App;
